@@ -5,4 +5,4 @@ venv
 pickels
 
 # Ignore the large combined data file
-data/labeled_900.csv
+data/labeled_900_smo.csv
