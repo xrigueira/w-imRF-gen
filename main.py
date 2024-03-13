@@ -198,7 +198,7 @@ class imRF():
         data_background = data[data["label"] == 0]
         
         # Filter the dataset to include only days that meet the ammonium level the condition
-        mean_ammonium = np.mean(data_background.ammonium_901)
+        mean_ammonium = np.mean(data_background.ammonium_900)
         data_background = data_background.loc[data_background[f'ammonium_{self.station}'] <= mean_ammonium]
         
         # Extract the length of the anomalies
@@ -966,7 +966,7 @@ class imRF():
         loaded_model_med = pickle.load(open(filename, 'rb'))
         filename = f'models/rf_model_low_{self.iteration}.sav'
         loaded_model_low = pickle.load(open(filename, 'rb'))
-
+        
         # Define the explainer object
         GPU = False
         if GPU: # The GPU version is experimental according to the API documentation: https://shap.readthedocs.io/en/latest/api.html
@@ -1019,7 +1019,7 @@ if __name__ == '__main__':
 
     # Create an instance of the model
     window_size = 32
-    imRF = imRF(station=901, trim_percentage=0, ratio_init=12, ratio=2, num_variables=6, 
+    imRF = imRF(station=900, trim_percentage=0, ratio_init=12, ratio=2, num_variables=6, 
                 window_size=window_size, stride=1, seed=0)
     
     # Start number of anomalies_med
@@ -1060,7 +1060,7 @@ if __name__ == '__main__':
 
     # Test the model
     imRF.test_RandomForest()
-
+    
     print(f'[INFO] SHAP plots')
     # Get the SHAP plots
     imRF.shap_RandomForest()

@@ -5,7 +5,7 @@ plt.style.use('ggplot')
 
 from scipy.interpolate import interp1d
 
-station = 906
+station = 900
 
 # Read the data
 df_original = pd.read_csv(f'plots/{station}_plots.csv', delimiter=',', index_col=['iteration'])

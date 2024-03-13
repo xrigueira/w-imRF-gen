@@ -2,8 +2,8 @@ import pickle
 import pandas as pd
 
 # Define main parameters
-station = 901
-num_iter = 8
+station = 900
+num_iter = 9
 
 num_windows = pd.DataFrame(columns=['iteration', 'resolution', 'background_windows', 'anomalous_windows'])
 

@@ -207,7 +207,7 @@ def explainer(data, model, resolution, station, name):
     
     plt.figure(figsize=(10, 8))
     sns.heatmap(heatmap_data, xticklabels=range(max_len), yticklabels=list(variables.keys()), 
-                cmap='viridis', annot=True, annot_kws={"size": 14}, fmt="d") # annot size 14 for anomalies and 10 for background
+                cmap='viridis', annot=True, annot_kws={"size":9}, fmt="d") # annot size 14 for anomalies and 8 for background
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
     plt.xlabel('Position', fontsize=16)

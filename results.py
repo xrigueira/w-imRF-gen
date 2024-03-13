@@ -92,7 +92,7 @@ def majority_vote(high, med, low):
 
 if __name__ == '__main__':
 
-    station = 901
+    station = 900
     data_type = 'anomalies' # 'anomalies' or 'background
 
     window_size_high, window_size_med, window_size_low = 32, 16, 8
@@ -164,10 +164,7 @@ if __name__ == '__main__':
         
         event_number = int(input(f'Event number: '))
 
-        get_results(event_number=event_number, station=station) # 901: anomalies 4 or 24
-                                            # 905: anomalies 18 or 33
-                                            # 906: anomalies 0
-                                            # 907: anomalies 25 or 34
+        get_results(event_number=event_number, station=station) # 900: anomalies 72, 38, or 40 background 82
 
     elif data_type == 'background':
         
